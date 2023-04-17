@@ -6,11 +6,15 @@ use Alura\Leilao\Model\Leilao;
 
 class Avaliador
 {
-    protected $biggerValue;
+    protected $biggerValue = 0;
     public function avalia(Leilao $leilao){
-        $lances = $leilao->getLances();
-        $lastBid = $lances[count($lances) -1];
-        $this->biggerValue = $lastBid->getValor();
+
+        foreach($leilao->getLances() as $lance){
+            if($lance->getValor() > $this->biggerValue){
+                $this->biggerValue = $lance->getValor();
+            }
+
+        }
         
     }
     public function getBiggerValeu(){
