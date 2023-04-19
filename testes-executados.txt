@@ -1,0 +1,11 @@
+Alura\Leilao\Tests\Service\Avaliador
+ [x] Avaliador pegar maior with data set "Ordem Crescente"
+ [x] Avaliador pegar maior with data set "Ordem Descrescente"
+ [x] Avaliador pegar maior with data set "Ordem Aleatória"
+ [x] Avaliador pegar menor with data set "Ordem Crescente"
+ [x] Avaliador pegar menor with data set "Ordem Descrescente"
+ [x] Avaliador pegar menor with data set "Ordem Aleatória"
+ [x] Avaliador buscar 3 maiores valores with data set "Ordem Crescente"
+ [x] Avaliador buscar 3 maiores valores with data set "Ordem Descrescente"
+ [x] Avaliador buscar 3 maiores valores with data set "Ordem Aleatória"
+
