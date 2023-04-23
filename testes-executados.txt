@@ -2,6 +2,7 @@ Alura\Leilao\Tests\Models\Leilao
  [x] Leilao deve recebe lances with data set "2-lances"
  [x] Leilao deve recebe lances with data set "1-lance"
  [x] Leilao nao dev ter 2 lances repetidos
+ [x] Leilao com mais 5 lances user por usuario
 
 Alura\Leilao\Tests\Service\Avaliador
  [x] Avaliador pegar maior with data set "Ordem Crescente"
