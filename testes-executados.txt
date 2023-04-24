@@ -14,4 +14,5 @@ Alura\Leilao\Tests\Service\Avaliador
  [x] Avaliador buscar 3 maiores valores with data set "Ordem Crescente"
  [x] Avaliador buscar 3 maiores valores with data set "Ordem Descrescente"
  [x] Avaliador buscar 3 maiores valores with data set "Ordem Aleatória"
+ [x] Leilao nao pode ser vazio
 

@@ -121,6 +121,21 @@ class AvaliadorTest extends TestCase {
     {
 
     }
+    public function test_leilao_nao_pode_ser_vazio(){
+        // try{
+
+        //     static::fail();
+
+        // }catch(\DomainException $exception){
+        //     static::assertEquals('não é possivel avaliar leilão vazio', $exception->getMessage());
+        // }
+        $this->expectException(\DomainException::class);
+        $this->expectExceptionMessage('não é possivel avaliar leilão vazio');
+
+        $leilao = new Leilao('Fusca Azul');
+        $this->leiloeiro->avalia($leilao);
+
+    }
     // public function entregaLeiloes(){
     //     return [
     //         [$this->leilaoEmOrdemCrescente()],
