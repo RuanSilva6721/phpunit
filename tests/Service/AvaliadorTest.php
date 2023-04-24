@@ -136,6 +136,20 @@ class AvaliadorTest extends TestCase {
         $this->leiloeiro->avalia($leilao);
 
     }
+    public function test_leilao_finalizado_nao_pode_ser_avaliado(){
+
+        $this->expectException(\DomainException::class);
+        $this->expectExceptionMessage('Leilão já está finalizado!');
+
+        $leilao = new Leilao('Fiat 147 0KM');
+        $ana = new Usuario('Ana');
+
+        $leilao->recebeLance(new Lance($ana, 2500));
+
+        $leilao->finaliza();
+
+        $this->leiloeiro->avalia($leilao);
+    }
     // public function entregaLeiloes(){
     //     return [
     //         [$this->leilaoEmOrdemCrescente()],

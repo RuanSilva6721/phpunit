@@ -13,6 +13,10 @@ class Avaliador
 
     public function avalia(Leilao $leilao){
 
+        if($leilao->estaFinalizado()){
+            throw new \DomainException('Leilão já está finalizado!');
+        }
+
         if(empty(($leilao->getLances()))){
             throw new \DomainException('não é possivel avaliar leilão vazio');
         }
@@ -42,4 +46,5 @@ class Avaliador
     public function getMaioresLances(){
         return $this->maioresLances;
     }
+
 }

@@ -9,6 +9,9 @@ class Leilao
     /** @var string */
     private $descricao;
 
+    
+    private $finalizado = false;
+
     public function __construct(string $descricao)
     {
         $this->descricao = $descricao;
@@ -36,6 +39,9 @@ class Leilao
     {
         return $this->lances;
     }
+    public function finaliza(){
+        $this->finalizado =  true;
+    }
 
     private function ehDoUltimoUsuario(Lance $lance){
         $lance1 = $this->lances[count($this->lances) -1];
@@ -51,5 +57,8 @@ class Leilao
 
         }, 0);
         return $totalLancesUsuario;
+    }
+    public function estaFinalizado(){
+        return $this->finalizado;
     }
 }
